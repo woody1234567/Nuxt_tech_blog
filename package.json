@@ -22,11 +22,14 @@
     "better-sqlite3": "^12.6.2",
     "eslint": "^9.39.2",
     "nuxt": "^4.2.2",
+    "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3",
     "vue": "^3.5.27",
     "vue-router": "^4.6.4"
   },
   "devDependencies": {
+    "@iconify-json/fa6-brands": "^1.2.6",
+    "@iconify-json/heroicons": "^1.2.3",
     "@vitest/coverage-v8": "^4.0.17",
     "@vue/test-utils": "^2.4.6",
     "vitest": "^4.0.17"
