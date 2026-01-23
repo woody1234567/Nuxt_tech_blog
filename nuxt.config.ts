@@ -27,7 +27,7 @@ export default defineNuxtConfig({
   studio: {
     repository: {
       provider: "github", // 'github' or 'gitlab'
-      owner: "wooy1234567",
+      owner: "woody1234567",
       repo: "Nuxt_tech_blog",
       branch: "master",
     },
