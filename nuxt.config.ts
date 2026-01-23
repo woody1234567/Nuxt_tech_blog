@@ -33,7 +33,7 @@ export default defineNuxtConfig({
     },
   },
   site: {
-    url: "https://nuxttechblog.studywithwoody.site",
+    url: "https://nuxtcms.studywithwoody.site",
     name: "Woody's tech blog",
     description: "Tech blog about AI, Nuxt, Python, and Web Dev",
     defaultLocale: "zh-Hant",
