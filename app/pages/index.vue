@@ -8,7 +8,7 @@ useSeoMeta({
   description: page.value?.hero?.text || "A place to share my learning notes",
 });
 
-const heroImage = "/assets/images/Triceratops/Visualization/讀書.png";
+const heroImage = "/assets/images/Visualization/reading-day.png";
 </script>
 
 <template>
@@ -21,7 +21,7 @@ const heroImage = "/assets/images/Triceratops/Visualization/讀書.png";
       <UContainer class="flex flex-col md:flex-row items-center gap-12">
         <div class="flex-1 text-center md:text-left z-10">
           <h1
-            class="text-5xl md:text-7xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-indigo-600"
+            class="text-5xl md:text-6xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-linear-to-r from-primary-600 to-indigo-600"
           >
             {{ page?.hero?.name || "Woody's Tech Blog" }}
           </h1>
@@ -50,7 +50,7 @@ const heroImage = "/assets/images/Triceratops/Visualization/讀書.png";
             class="absolute -inset-4 bg-primary-500/20 blur-3xl rounded-full"
           />
           <img
-            src="~/assets/images/Triceratops/Visualization/讀書.png"
+            src="~/assets/images/Visualization/reading-day.png"
             alt="Studying Triceratops"
             class="relative w-full max-w-md hover:scale-105 transition-transform duration-500"
           />
@@ -66,8 +66,8 @@ const heroImage = "/assets/images/Triceratops/Visualization/讀書.png";
           class="hover:shadow-lg transition-shadow border-t-4 border-t-primary-500"
         >
           <div class="flex items-center gap-3 mb-4">
-            <img
-              src="~/assets/images/Triceratops/Icon/curious-right.png"
+            <ThemeIcon
+              name="curious-right-mouthopen.png"
               class="w-8 h-8 opacity-80"
             />
             <h3 class="text-xl font-bold">{{ feature.title }}</h3>

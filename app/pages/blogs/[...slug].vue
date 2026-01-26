@@ -116,8 +116,8 @@ useSeoMeta({
         <div
           class="mb-8 flex items-center gap-4 border-b pb-4 border-gray-200 dark:border-gray-800"
         >
-          <img
-            src="~/assets/images/Triceratops/Icon/happy-right.png"
+          <ThemeIcon
+            name="happy-right.png"
             alt="Happy Triceratops"
             class="w-16 h-16"
           />
@@ -150,8 +150,8 @@ useSeoMeta({
 
     <!-- 404 STATE -->
     <div v-else class="text-center py-20 flex flex-col items-center">
-      <img
-        src="~/assets/images/Triceratops/Icon/confused-right.png"
+      <ThemeIcon
+        name="confused-right.png"
         alt="Confused Triceratops"
         class="w-32 h-32 mb-6"
       />

@@ -27,8 +27,8 @@ const links = [
         to="/"
         class="flex items-center gap-3 hover:opacity-80 transition-opacity"
       >
-        <img
-          src="~/assets/images/Triceratops/Icon/logo-normal.png"
+        <ThemeIcon
+          name="logo-normal.png"
           alt="Nuxt Skills Logo"
           class="h-10 w-10 object-contain"
         />
