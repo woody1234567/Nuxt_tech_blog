@@ -1,11 +1,32 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData("home", () => {
-  return queryCollection("content").path("/").first();
-});
+const hero = {
+  name: "Woody's Tech Blog",
+  text: "Keep close to the tech wave",
+  actions: [
+    { link: "/blogs/ai", theme: "brand", text: "Explore AI" },
+    { link: "/blogs/nuxt", theme: "secondary", text: "Nuxt Notes" },
+  ],
+};
+
+const features = [
+  {
+    title: "Latest Tech",
+    details:
+      "Diving deep into the newest frameworks and tools in the industry.",
+  },
+  {
+    title: "Learning Notes",
+    details: "Structured insights from my daily coding and research journeys.",
+  },
+  {
+    title: "Practical Tips",
+    details: "Real-world solutions for common development challenges.",
+  },
+];
 
 useSeoMeta({
-  title: page.value?.hero?.name || "Woody's Tech Blog",
-  description: page.value?.hero?.text || "A place to share my learning notes",
+  title: hero.name,
+  description: hero.text,
 });
 </script>
 
@@ -19,23 +40,23 @@ useSeoMeta({
       <UContainer class="flex flex-col md:flex-row items-center gap-12">
         <div class="flex-1 text-center md:text-left z-10">
           <h1
-            class="text-5xl md:text-6xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-linear-to-r from-primary-500 to-indigo-600"
+            class="text-5xl md:text-6xl font-bold tracking-tight mb-6 pb-2 bg-clip-text text-transparent bg-linear-to-r from-primary-500 to-indigo-600"
           >
-            {{ page?.hero?.name || "Woody's Tech Blog" }}
+            {{ hero.name }}
           </h1>
           <p
             class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 font-light"
           >
-            {{ page?.hero?.text || "Keep close to the tech wave" }}
+            {{ hero.text }}
           </p>
 
           <div class="flex flex-wrap gap-4 justify-center md:justify-start">
             <UButton
-              v-for="action in page?.hero?.actions || []"
+              v-for="action in hero.actions"
               :key="action.link"
               :to="action.link"
               size="xl"
-              :color="action.theme === 'brand' ? 'primary' : 'gray'"
+              :color="action.theme === 'brand' ? 'primary' : 'neutral'"
               :variant="action.theme === 'brand' ? 'solid' : 'outline'"
             >
               {{ action.text }}
@@ -60,7 +81,7 @@ useSeoMeta({
     <UContainer class="py-20">
       <div class="grid md:grid-cols-3 gap-8">
         <UCard
-          v-for="(feature, index) in page?.features || []"
+          v-for="(feature, index) in features"
           :key="index"
           class="hover:shadow-lg transition-shadow border-t-4 border-t-primary-500"
         >
