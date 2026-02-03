@@ -7,8 +7,6 @@ useSeoMeta({
   title: page.value?.hero?.name || "Woody's Tech Blog",
   description: page.value?.hero?.text || "A place to share my learning notes",
 });
-
-const heroImage = "/assets/images/Visualization/reading-day.png";
 </script>
 
 <template>
@@ -21,7 +19,7 @@ const heroImage = "/assets/images/Visualization/reading-day.png";
       <UContainer class="flex flex-col md:flex-row items-center gap-12">
         <div class="flex-1 text-center md:text-left z-10">
           <h1
-            class="text-5xl md:text-6xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-linear-to-r from-primary-600 to-indigo-600"
+            class="text-5xl md:text-6xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-linear-to-r from-primary-500 to-indigo-600"
           >
             {{ page?.hero?.name || "Woody's Tech Blog" }}
           </h1>
@@ -48,12 +46,13 @@ const heroImage = "/assets/images/Visualization/reading-day.png";
         <div class="flex-1 flex justify-center relative">
           <div
             class="absolute -inset-4 bg-primary-500/20 blur-3xl rounded-full"
-          />
-          <img
-            src="~/assets/images/Visualization/reading-day.png"
-            alt="Studying Triceratops"
-            class="relative w-full max-w-md hover:scale-105 transition-transform duration-500"
-          />
+          >
+            <img
+              src="~/assets/images/Visualization/reading-day.png"
+              alt="Studying Triceratops"
+              class="relative w-full max-w-md hover:scale-105 transition-transform duration-500"
+            />
+          </div>
         </div>
       </UContainer>
     </section>
