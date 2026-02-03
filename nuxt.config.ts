@@ -7,7 +7,6 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxt/eslint",
     "@nuxt/ui",
-    "@nuxt/test-utils",
     "@nuxtjs/seo",
     "nuxt-studio",
   ],
