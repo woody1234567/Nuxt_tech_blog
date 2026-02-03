@@ -1,4 +1,10 @@
-# 如何在 FastAPI 中調用記憶體 Buffer 回傳圖片?(附 python+matplotlib+fastapi 實例)
+---
+title: 如何在 FastAPI 中調用記憶體 Buffer 回傳圖片 (附實例)
+description: 學習如何使用 io.BytesIO 在 FastAPI 中即時產生並回傳 Matplotlib 圖表，避免實體檔案帶來的效能瓶頸。
+tags: [fastapi, matplotlib, python, memory-buffer, optimization]
+category: python
+date: 2026-02-03
+---
 
 在使用 FastAPI 建立資料視覺化 API 時，一個常見的需求是：**即時產生圖表，並直接回傳給前端顯示**。許多初學者會直覺地將圖存成檔案，再讀取檔案回傳，但在實際的後端服務環境中，這種做法往往會帶來效能與併發上的風險。
 

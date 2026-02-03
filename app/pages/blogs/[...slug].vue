@@ -131,6 +131,38 @@ useSeoMeta({
           </div>
         </div>
 
+        <!-- Metadata Section -->
+        <div v-if="page" class="flex flex-wrap items-center gap-3 mb-6 text-sm">
+          <UBadge
+            v-if="page.category"
+            color="primary"
+            variant="soft"
+            class="capitalize"
+          >
+            {{ page.category }}
+          </UBadge>
+
+          <span
+            v-if="page.date"
+            class="text-gray-500 dark:text-gray-400 flex items-center gap-1"
+          >
+            <UIcon name="i-heroicons-calendar-days" class="w-4 h-4" />
+            {{ new Date(page.date).toLocaleDateString() }}
+          </span>
+
+          <div v-if="page.tags?.length" class="flex flex-wrap gap-2">
+            <UBadge
+              v-for="tag in page.tags"
+              :key="tag"
+              color="gray"
+              variant="outline"
+              size="s"
+            >
+              #{{ tag }}
+            </UBadge>
+          </div>
+        </div>
+
         <article class="prose dark:prose-invert max-w-none">
           <ContentRenderer :value="page" />
         </article>

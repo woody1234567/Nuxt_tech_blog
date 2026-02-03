@@ -1,6 +1,9 @@
 ---
 title: Nuxt 實戰指南
 description: 掌握 Nuxt.js 框架的各項功能，打造高效、流暢且具備視覺魅力的現代化 Web 應用。
+tags: [nuxt, frontend, guide]
+category: nuxt
+date: 2026-02-03
 ---
 
 # Nuxt 實戰指南

@@ -1,9 +1,10 @@
 ---
-
 title: MCP（Model Context Protocol）是什麼？用「AI 的 USB-C」理解模型如何安全連接工具與資料
 description: 一篇用實務角度講清楚 MCP 的概念、架構、核心能力與安全注意事項，幫助你快速判斷何時該用 MCP、怎麼開始用。
-tags: [MCP, AI Agent, LLM, Tooling, Protocol]
----------------------------------------------
+tags: [mcp, ai-agent, llm, tooling, protocol]
+category: ai
+date: 2026-02-03
+---
 
 # MCP 是甚麼?
 
@@ -11,7 +12,7 @@ tags: [MCP, AI Agent, LLM, Tooling, Protocol]
 
 ![MCP USB-C][USB_analog]
 
-*Source: [MCP: The Flip Side of the USB-C Analogy | by Peilun Li | Towards ](https://pub.towardsai.net/mcp-the-flip-side-of-the-usb-c-analogy-af98e07bdb30)*
+_Source: [MCP: The Flip Side of the USB-C Analogy | by Peilun Li | Towards ](https://pub.towardsai.net/mcp-the-flip-side-of-the-usb-c-analogy-af98e07bdb30)_
 
 [USB_analog]: USB_analog.png
 
@@ -27,15 +28,15 @@ MCP 是一個開放標準／開放規格，用來定義 **LLM 應用（Client/Ho
 
 MCP 常見的角色分工是：
 
-* **Host**：承載模型的應用（例如桌面版 AI、IDE、內部聊天系統），負責把使用者需求帶進來、顯示結果、管理安全邊界。
-* **Client**：在 Host 內與 MCP Server 對話的元件，負責用 MCP 規格送出請求、接收回應。
-* **Server**：你把「工具、資料、工作流程」封裝成 MCP Server，對外提供標準化介面（例如：讀 Git repo、查 Postgres、打 Jira/Slack、呼叫公司內部服務）。
+- **Host**：承載模型的應用（例如桌面版 AI、IDE、內部聊天系統），負責把使用者需求帶進來、顯示結果、管理安全邊界。
+- **Client**：在 Host 內與 MCP Server 對話的元件，負責用 MCP 規格送出請求、接收回應。
+- **Server**：你把「工具、資料、工作流程」封裝成 MCP Server，對外提供標準化介面（例如：讀 Git repo、查 Postgres、打 Jira/Slack、呼叫公司內部服務）。
 
 整體是一種 client-host-server 的設計，重點是讓 AI 端與外部能力之間有清楚的邊界與會話（session）管理，同時保留安全控管的空間。[7] [3]
 
 ![MCP architecture][MCP_architecture]
 
-*Source: [What is MCP? | by Workato](https://www.workato.com/the-connector/what-is-mcp/?utm_source=chatgpt.com)*
+_Source: [What is MCP? | by Workato](https://www.workato.com/the-connector/what-is-mcp/?utm_source=chatgpt.com)_
 
 [MCP_architecture]: MCP_architecture.png
 
@@ -49,8 +50,8 @@ MCP 常見的角色分工是：
 
 多數 MCP 的實作會把能力分成兩大類：
 
-* **Tools**：可以被呼叫執行的動作（例如：`searchTickets`、`createPR`、`queryDB`）。
-* **Resources**：可被讀取/瀏覽的上下文資源（例如：檔案、文件、資料表、專案資訊），用來讓模型「拿到足夠上下文」再做推理或呼叫工具。
+- **Tools**：可以被呼叫執行的動作（例如：`searchTickets`、`createPR`、`queryDB`）。
+- **Resources**：可被讀取/瀏覽的上下文資源（例如：檔案、文件、資料表、專案資訊），用來讓模型「拿到足夠上下文」再做推理或呼叫工具。
 
 這樣的切分很貼近真實需求：AI 要做事通常需要「先取得資訊（resources/context）→ 再執行動作（tools）」的閉環。[2] [5]
 

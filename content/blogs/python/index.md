@@ -1,6 +1,9 @@
 ---
 title: Python 程式開發
 description: 從基礎到進階的 Python 開發技巧，涵蓋效能優化、內存管理與自動化腳本。
+tags: [python, programming, optimization]
+category: python
+date: 2026-02-03
 ---
 
 # Python 程式開發

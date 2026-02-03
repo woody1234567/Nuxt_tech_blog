@@ -1,6 +1,10 @@
-# 使用 Nuxt Image vs `<img>`：為什麼 Nuxt 3 專案幾乎都該用 `<NuxtImg>`？
-
-#Nuxt #Nuxt3 #Frontend #WebPerformance #ImageOptimization #VitePress
+---
+title: Nuxt Image vs <img>：為什麼 Nuxt 3 專案幾乎都該用 <NuxtImg>？
+description: 深入探討 Nuxt Image 的優勢，包括自動優化、縮放、Lazy Loading 以及如何提升 Web Performance 和 Core Web Vitals。
+tags: [nuxt, nuxt-image, performance, web-vitals]
+category: nuxt
+date: 2026-02-03
+---
 
 在 **Nuxt（特別是 Nuxt 3）** 裡，使用 **Nuxt Image（`<NuxtImg>` / `<NuxtPicture>`）** 來引入圖片，和直接使用原生 **`<img>`** 相比，差異並不只是語法上的方便，而是一整套**圖片效能優化與開發體驗（DX）設計**。
 
