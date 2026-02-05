@@ -6,10 +6,22 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/seo",
     "@nuxt/content",
+    "nuxt-llms",
     "@nuxt/eslint",
     "@nuxt/ui",
     "nuxt-studio",
   ],
+  llms: {
+    domain: "https://nuxtcms.studywithwoody.site",
+    title: "Woody's tech blog",
+    description: "Tech blog about AI, Nuxt, Python, and Web Dev",
+    content: {
+      collections: ["content"],
+    },
+    full: {
+      includeContent: true,
+    },
+  },
   content: {
     build: {
       markdown: {
