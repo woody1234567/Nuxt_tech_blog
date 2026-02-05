@@ -96,8 +96,10 @@ const surround = computed(() => {
 });
 
 useSeoMeta({
-  title: page.value?.title || "Nuxt Skills Blog",
-  description: page.value?.description || "Learn Nuxt skills with us!",
+  title: page.value?.title || "Woody's Tech Blog",
+  description:
+    page.value?.description || "Tech blog about AI, Nuxt, Python, and Web Dev",
+  keywords: page.value?.keywords || page.value?.tags?.join(", "),
 });
 </script>
 
