@@ -4,10 +4,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
+    "@nuxtjs/seo",
     "@nuxt/content",
     "@nuxt/eslint",
     "@nuxt/ui",
-    "@nuxtjs/seo",
     "nuxt-studio",
   ],
   content: {
