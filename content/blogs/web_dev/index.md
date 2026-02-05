@@ -1,9 +1,13 @@
 ---
 title: Web 前端開發
-description: 深入學習現代 Web 前端技術，包括 DOM 操作、CSS 效能以及各種前端框架的應用。
-tags: [web-dev, frontend, javascript, css]
 category: web_dev
 date: 2026-02-03
+description: 深入學習現代 Web 前端技術，包括 DOM 操作、CSS 效能以及各種前端框架的應用。
+tags:
+  - web-dev
+  - frontend
+  - javascript
+  - css
 ---
 
 # Web 前端開發
