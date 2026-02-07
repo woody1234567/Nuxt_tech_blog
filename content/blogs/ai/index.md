@@ -1,9 +1,14 @@
 ---
 title: AI 技術探索
-description: 探索人工智慧的最前沿技術，包括大型語言模型、模型上下文協議 (MCP) 等。
-tags: [ai, llm, mcp]
 category: ai
 date: 2026-02-03
+description: 探索人工智慧的最前沿技術，包括大型語言模型、模型上下文協議 (MCP) 等。
+sitemap:
+  loc: /blogs/ai
+tags:
+  - ai
+  - llm
+  - mcp
 ---
 
 # AI 技術探索
